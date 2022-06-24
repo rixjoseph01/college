@@ -1,0 +1,55 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>SIGN IN</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="/CSS/homepage.css">
+</head>
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+  <a class="navbar-brand" href="#">POD7 COLLEGE</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+	  <a class="nav-item nav-link active" href="/">HOME <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link active" href="/about">ABOUT US</a>
+      <a class="nav-item nav-link active" href="/contact">CONTACT US</a>
+      <a class="nav-item nav-link active" href="/login">SIGN IN</a>
+      <a class="nav-item nav-link active" href="/signup">SIGN UP</a>
+    </div>
+  </div>
+</nav>
+<body>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2 style="color:green;">Contact Us</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-7 mb-4 mb-lg-0">
+        <form th:action="@{/contactsave}" method="post" th:object="${contactobject}">
+          <input type="text" class="form-control mb-3" id="name" name="name" th:field="*{name}" placeholder="Your Name">
+          <input type="email" class="form-control mb-3" id="mail" name="mail" th:field="*{mail}" placeholder="Your Email">
+          <input type="text" class="form-control mb-3" id="subject" name="subject" th:field="*{subject}" placeholder="Subject">
+          <textarea name="message" id="message" th:field="*{message}" class="form-control mb-3" placeholder="Your Message"></textarea>
+          <button type="submit" value="send" class="btn btn-success">SEND MESSAGE</button>
+        </form>
+      </div>
+      <div class="col-lg-5">
+        <p class="mb-5">Do you have other questions? Don't worry, there aren't any dumb questions. Just fill out the form below and we'll get back to you as soon as possible.</p>
+        <a href="tel:+8802057843248" class="text-color h5 d-block">+880 20 5784 3248</a>
+        <a href="mailto:yourmail@email.com" class="mb-5 text-color h5 d-block">pod7college@gmail.com</a>
+        <p>POD7 College, South Kalamassery,<br> Ernakulam, Kerala</p>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>

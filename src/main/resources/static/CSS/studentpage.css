@@ -1,0 +1,8 @@
+ul {
+display: table;
+margin: 0 auto;
+}
+.tablecenter {
+  margin-left: auto;
+  margin-right: auto;
+}
